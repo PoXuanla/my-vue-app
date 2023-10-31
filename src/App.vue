@@ -3,7 +3,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 const modules = import.meta.glob("./components/*.vue");
 console.log(modules["./components/HelloWorld.vue"]);
-const regex = /"([^"]+)"/;
+const regex = /"(HelloWorld[^"]+)"/;
 const match = modules["./components/HelloWorld.vue"].toString().match(regex);
 console.log(match);
 const link = document.createElement("link");

@@ -1,15 +1,18 @@
 import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
-import { createRouter, createWebHistory } from "vue-router";
+
+import Main from "./components/Main.vue";
+
+import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
-  { path: "/", component: App },
+  { path: "/", component: Main },
   { path: "/hello", component: () => import("./components/HelloWorld.vue") },
 ];
 const router = createRouter({
   // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes, // short for `routes: routes`
 });
 

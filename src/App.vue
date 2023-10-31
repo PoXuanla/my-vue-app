@@ -3,10 +3,10 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 const modules = import.meta.glob("./components/*.vue");
 console.log(modules["./components/HelloWorld.vue"]);
-const regex = /"(\.\/[^"]+)"/;
+const regex = /"([^"]+)"/;
 const match = modules["./components/HelloWorld.vue"].toString().match(regex);
 const link = document.createElement("link");
-link.href = match[1];
+link.href = './assets/' + match[1];
 link.rel = 'prefetch';
 document.head.appendChild(link);
 

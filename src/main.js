@@ -4,7 +4,7 @@ import App from "./App.vue";
 
 import Main from "./components/Main.vue";
 
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   { path: "/", component: Main },
@@ -12,7 +12,7 @@ const routes = [
 ];
 const router = createRouter({
   // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes, // short for `routes: routes`
 });
 

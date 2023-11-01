@@ -4,7 +4,6 @@
 
 <template>
   <div>
-
     <button @click="$router.push('/hello')">go</button>
     <RouterView></RouterView>
   </div>
